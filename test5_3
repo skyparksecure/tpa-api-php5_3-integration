@@ -1,0 +1,15 @@
+#!/usr/bin/env bash
+
+set -e
+
+test_file_name=${1:-index.php}
+
+echo "----- Build container - testing file [${test_file_name}]"
+
+docker build --build-arg TEST_FILE=${test_file_name} -t tpa-5:test .
+
+echo "----- Run container - testing file [${test_file_name}]"
+docker run -it --rm --name tpa-5-1 tpa-5:test
+
+exit 0
+
