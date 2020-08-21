@@ -173,7 +173,7 @@ $cancellationRequest = new ParkingOrderCancellationRequestDTO(array(
        'OrderReference' => $booking->OrderReference,
     ),
     'CancellationReason' => 'This was just a test order',
-    'CancellationInitiator' => 'Jan Pedryc',
+    'CancellationInitiator' => 'Jan',
 ));
 
 //var_dump($cancellationRequest->toArray());

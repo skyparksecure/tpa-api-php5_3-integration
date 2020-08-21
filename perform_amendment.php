@@ -171,7 +171,7 @@ catch (\Exception $exception) {
 
 //$amendmentRequestToken = new ParkingOrderAmendmentRequestDTO($amendmentRequest->toArray());
 //$amendmentRequestToken->AmendmentReason = 'Testing';
-//$amendmentRequestToken->AmendmentInitiator = 'Jan Pedryc';
+//$amendmentRequestToken->AmendmentInitiator = 'Jan';
 
 $amendmentRequestToken = new ParkingOrderAmendmentRequestDTO(array(
     'AmendmentToken' => $amendmentRequest->AmendmentToken,
@@ -179,7 +179,7 @@ $amendmentRequestToken = new ParkingOrderAmendmentRequestDTO(array(
         'OrderReference' => $booking->OrderReference
     ),
     'AmendmentReason' => 'Testing',
-    'AmendmentInitiator' => 'Jan Pedryc',
+    'AmendmentInitiator' => 'Jan',
 ));
 
 echo PHP_EOL . '#### Execute amendment' . PHP_EOL;
@@ -225,7 +225,7 @@ die();
 //        'OrderReference' => $booking->OrderReference,
 //    ),
 //    'CancellationReason' => 'This was just a test order',
-//    'CancellationInitiator' => 'Jan Pedryc',
+//    'CancellationInitiator' => 'Jan',
 //));
 //
 //var_dump($cancellationRequest->toArray());
